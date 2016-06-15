@@ -1,0 +1,52 @@
+Access control
+Browsing
+Code generator
+Company
+Depth
+Distribution
+Editing
+Flat company
+Flattened company
+Gender
+Geolocation
+Grouping
+History
+Intelligent UI
+Job role
+Localization
+Logging
+Mapping
+Median
+Parallelism
+Parsing
+Persistence
+Program comprehension demo
+Ranking
+Reliability
+Reporting
+Serialization
+Singleton
+Software analysis demo
+Software metrics demo
+Software transformation demo
+Task parallelism
+Unparsing
+Visualization
+Web UI
+Wiki analysis demo
+COI
+Closed serialization
+Cut
+Data parallelism
+Open serialization
+Restructuring
+Touch control
+Voice control
+Day of birth
+Undo-redo
+Dimensionality
+Conversion
+Offline mode
+Mentoring
+Total
+Hierarchical company
