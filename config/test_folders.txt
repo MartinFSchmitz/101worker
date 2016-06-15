@@ -1,3 +1,5 @@
 contributions/py3k
 contributions/ruby
 contributions/javaTree
+contributions/javaComposition
+contributions/haskellComposition
