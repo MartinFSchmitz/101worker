@@ -49,7 +49,6 @@ def update_file(context, f):
         context.write_dump('featureLocation', data)
 
     except UnicodeDecodeError:
-        context.write_dump('featureLocation', {[]})
         print("Error occured while executing featureLocation for file " + f)
 
 
