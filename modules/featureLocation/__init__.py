@@ -49,11 +49,9 @@ def update_file(context, f):
         context.write_dump('featureLocation', data)
 
     except UnicodeDecodeError:
-        context.write_dump('featureLocation', 0)
+        context.write_dump('featureLocation', [])
         print("Error occured while executing featureLocation for file " + f)
 
-def remove_file(context, f):
-    context.remove_derived_resource(f, 'fl')
 
 def run(context, change):
     # dispatch the modified file
@@ -64,7 +62,7 @@ def run(context, change):
         update_file(context, change['file'])
 
     else:
-        remove_file(context, change['file'])
+        update_file(context, change['file'])
 
 
 
