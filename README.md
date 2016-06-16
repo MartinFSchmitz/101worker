@@ -1,3 +1,11 @@
+# Usage
+
+1. Set up 101worker as usual
+2. Run our own ```install nltk``` to install extra Natural Language Toolkit(nltk)
+3. run ```import nltk``` and ```nltk.download()``` in the python console to open the NLTK Downloader
+4. Install "stopwords" and "punkt" with the NLTK Downloader 
+5. Use ```cd 101worker``` to change directory and run ```python bin/run_module featureLocation``` and ```python bin/run_module featureLocationWiki```
+
 # Installation
 
 It is advised to familiar yourself with the basic concepts of 101worker
