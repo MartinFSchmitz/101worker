@@ -19,6 +19,7 @@ def run(context):
 	wikiData = context.read_dump('wiki-links') ['wiki'] ['pages']
 	
 	#Runs through all Wiki Pages searching for features in every contribution
+	stemmer = PorterStemmer()
 	wikiList = []
 	for i in range(1,len(wikiData )):
 		if 'Implements' in wikiData [i]:
@@ -28,8 +29,9 @@ def run(context):
 				
 				if wikiData [i] ['Implements'] [j] ['p'] == 'Feature':
 					newFeature = wikiData [i] ['Implements'] [j] ['n']
-					wikiList [len(wikiList)-1].append(newFeature)
-	# Now wikiist is a list with lists as elements.
+					#Stemming and adding to list
+					wikiList [len(wikiList)-1].append(stemmer.stem(newFeature.lower()))
+	# Now wikiList is a list with lists as elements.
 	# Each of those list-elements contains the contribution name as first element
 	# and the names of the features implemented in the contribution as elements.	
 	#print(wikiList)
@@ -37,8 +39,12 @@ def run(context):
 	#print(realData)
 	
 	#ToDo: Stemming of the feature names in wikiList
-	for i in range(0, len(wikiList)):
-		for j in range(0, len(wikiList[i])):
-			text = wikiList[i][j]
-			print(text.lower())
+	#stemmer = PorterStemmer()
+	#for i in range(0, len(wikiList)):
+	#	for j in range(0, len(wikiList[i])):
+	#		text = wikiList[i][j].lower()
+	#		token = stemmer.stem(text)
+	#		print(token)
 	#compare wikilist with realData
+	for i in range(1, len(realData)):
+		print(realData[i])
