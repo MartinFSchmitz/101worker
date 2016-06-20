@@ -32,10 +32,13 @@ def run(context):
 	# Now wikiist is a list with lists as elements.
 	# Each of those list-elements contains the contribution name as first element
 	# and the names of the features implemented in the contribution as elements.	
-	print(wikiList)
+	#print(wikiList)
+	#print("------------------")
+	#print(realData)
 	
 	#ToDo: Stemming of the feature names in wikiList
+	for i in range(0, len(wikiList)):
+		for j in range(0, len(wikiList[i])):
+			text = wikiList[i][j]
+			print(text.lower())
 	#compare wikilist with realData
-			
-
-	
