@@ -45,6 +45,11 @@ def run(context):
 	#		text = wikiList[i][j].lower()
 	#		token = stemmer.stem(text)
 	#		print(token)
+
 	#compare wikilist with realData
-	for i in range(1, len(realData)):
-		print(realData[i])
+	for i in range(0, len(wikiList)):
+		search = wikiList[i] [0]
+		if search in realData:
+			print(search + ":")
+			for j in range(0, len(realData[search])):
+				print(realData[search] [j])
