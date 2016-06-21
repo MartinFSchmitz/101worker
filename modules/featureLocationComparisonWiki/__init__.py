@@ -44,18 +44,18 @@ def run(context):
 	#print(realData)
 	
 	#ToDo: Stemming of the feature names in wikiList
-	#stemmer = PorterStemmer()
-	#for i in range(0, len(wikiList)):
-	#	for j in range(0, len(wikiList[i])):
-	#		text = wikiList[i][j].lower()
-	#		token = stemmer.stem(text)
-	#		print(token)
-
-	print(wikiList)
-	#compare wikilist with realData
-	#for i in range(0, len(wikiList)):
-	#	search = wikiList[i] [0]
-	#	if search in realData:
-	#		print(search + ":")
-	#		for j in range(0, len(realData[search])):
-	#			print(realData[search] [j])
+	onlyWikiList = []
+	onlyRealList = []
+	#result = [['real','wiki']]
+	for i in range(0,len(wikiList )):
+	
+		key = wikiList[i][0]
+		wikiList[i].remove(key)
+		#result.append(key)
+		if key in realData:
+			onlyWikiElement = list(set(wikiList[i]) - set(realData[key]))
+			onlyRealElement = list(set(realData[key]) - set(wikiList[i]))
+			onlyRealList.append(onlyRealElement)
+			onlyWikiList.append(onlyWikiElement)
+	print(onlyWikiList)
+	print(onlyRealList)
