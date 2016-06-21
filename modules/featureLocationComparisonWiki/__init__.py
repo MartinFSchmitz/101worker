@@ -30,7 +30,12 @@ def run(context):
 				if wikiData [i] ['Implements'] [j] ['p'] == 'Feature':
 					newFeature = wikiData [i] ['Implements'] [j] ['n']
 					#Stemming and adding to list
-					wikiList [len(wikiList)-1].append(stemmer.stem(newFeature.lower()))
+					#print(type(newFeature))
+					newFeature = newFeature.lower()
+					newFeatureTokens = nltk.word_tokenize(newFeature)
+					newFeatureTokensStem = [stemmer.stem(t) for t in newFeatureTokens]
+					for tk in newFeatureTokensStem:
+						wikiList [len(wikiList)-1].append(tk)
 	# Now wikiList is a list with lists as elements.
 	# Each of those list-elements contains the contribution name as first element
 	# and the names of the features implemented in the contribution as elements.	
@@ -46,10 +51,11 @@ def run(context):
 	#		token = stemmer.stem(text)
 	#		print(token)
 
+	print(wikiList)
 	#compare wikilist with realData
-	for i in range(0, len(wikiList)):
-		search = wikiList[i] [0]
-		if search in realData:
-			print(search + ":")
-			for j in range(0, len(realData[search])):
-				print(realData[search] [j])
+	#for i in range(0, len(wikiList)):
+	#	search = wikiList[i] [0]
+	#	if search in realData:
+	#		print(search + ":")
+	#		for j in range(0, len(realData[search])):
+	#			print(realData[search] [j])
