@@ -39,23 +39,26 @@ def run(context):
 	# Now wikiList is a list with lists as elements.
 	# Each of those list-elements contains the contribution name as first element
 	# and the names of the features implemented in the contribution as elements.	
-	#print(wikiList)
-	#print("------------------")
-	#print(realData)
-	
-	#ToDo: Stemming of the feature names in wikiList
+
+	#Compare Wiki-Features to Real-Features
 	onlyWikiList = []
 	onlyRealList = []
-	#result = [['real','wiki']]
+	result = {}
+	
 	for i in range(0,len(wikiList )):
 	
 		key = wikiList[i][0]
 		wikiList[i].remove(key)
-		#result.append(key)
+		
+			
+		  # calculate defferences and save them in result
 		if key in realData:
-			onlyWikiElement = list(set(wikiList[i]) - set(realData[key]))
-			onlyRealElement = list(set(realData[key]) - set(wikiList[i]))
-			onlyRealList.append(onlyRealElement)
-			onlyWikiList.append(onlyWikiElement)
-	print(onlyWikiList)
-	print(onlyRealList)
+			onlyWikiList = list(set(wikiList[i]) - set(realData[key]))
+			onlyRealList = list(set(realData[key]) - set(wikiList[i]))
+			data = {'In Wiki but not Implemented':onlyWikiList,'Implemented but not in Wiki':onlyRealList}
+			result[key] = data
+			
+	context.write_dump('featureLocationComparisonWiki', result)
+    
+	print(result)
+	
