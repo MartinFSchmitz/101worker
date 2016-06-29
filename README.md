@@ -10,11 +10,11 @@
 
 ### featureLocation
 
-The featureLocation module stems the source code of each sorce file, removes stopwords and compares the result with feature tokens. A list of all found feature tokens per contribution is stored in the featureLocation dump file.
+The featureLocation module stems the source code of each sorce file, removes stopwords and compares the result with feature tokens. A list of all found features per contribution is stored in the featureLocation dump file.
 
 ### featureLocationComparisionWiki
 
-The featureLocationComparisionWiki module reads the dump files created by the featureLocation module and compares the implemented features with the features mentioned in the Wiki. The result is written in the featureLocationComparisonWiki dump file.
+The featureLocationComparisionWiki module searches the wiki for features mentioned in each contribution. These features are then compared with implemented features from the featureLocation dump file. The result is written in the featureLocationComparisonWiki dump file.
 
 # Team members:
 - Felix Schröder (fschroeder)
