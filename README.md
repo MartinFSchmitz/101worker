@@ -6,6 +6,15 @@
 4. Install "stopwords" and "punkt" with the NLTK Downloader 
 5. Use ```cd 101worker``` to change directory and run ```python bin/run_module featureLocation``` and ```python bin/run_module featureLocationComparisonWiki```
 
+# Characteristics
+
+# Team members:
+- Felix Schröder (fschroeder)
+- Sophia Kramer (skramer)
+- Nikolas Witt (nwitt)
+- Darius Thies (dath)
+- Martin Schmitz (martins)
+
 # Installation
 
 It is advised to familiar yourself with the basic concepts of 101worker
