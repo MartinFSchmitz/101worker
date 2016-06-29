@@ -14,7 +14,7 @@ config = {
 	}
 }
 def run(context):
-	# reads Data from Wiki and from the Contributions
+	#reads Data from Wiki and from the Contributions
 	realData = context.read_dump('featureLocation')
 	wikiData = context.read_dump('wiki-links') ['wiki'] ['pages']
 	
@@ -51,7 +51,7 @@ def run(context):
 		wikiList[i].remove(key)
 		
 			
-		  # calculate defferences and save them in result
+		# calculate differences and save them in result
 		if key in realData:
 			onlyWikiList = list(set(wikiList[i]) - set(realData[key]))
 			onlyRealList = list(set(realData[key]) - set(wikiList[i]))
@@ -60,5 +60,5 @@ def run(context):
 			
 	context.write_dump('featureLocationComparisonWiki', result)
     
-	print(result)
+	#print(result)
 	

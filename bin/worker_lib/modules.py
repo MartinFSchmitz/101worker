@@ -22,7 +22,8 @@ modules = [
     'plainTextWikiDump',
     'zip',
     'mongodump',
-	'featureLocation'
+	'featureLocation',
+	'featureLocationComparisonWiki'
 ]
 
 modules = [import_module(module) for module in modules]
